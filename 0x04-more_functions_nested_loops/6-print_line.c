@@ -1,23 +1,23 @@
 #include "main.h"
 
 /**
- * print_most_numbers - checks for checks for a digit (0 through 9).
- *
- * Return: Always 0.
+ * print_line - draws a straight line in the terminal
+ * @n: number of times the character _ should be printed
  */
-void print_most_numbers(void)
+void print_line(int n)
 {
- int c;
+	if (n <= 0)
+	{
+		_putchar('\n');
+	} else
+	{
+		int i;
 
- for (c = 48; c < 58; c++)
- {
- if (c != 50)
- {
- if (c != 52)
- {
- _putchar(c);
- }
- }
- }
- _putchar('\n');
+		for (i = 1; i <= n; i++)
+		{
+			_putchar('_');
+		}
+		_putchar('\n');
+	}
+
 }
